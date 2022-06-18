@@ -1,10 +1,27 @@
 {
+  "name": "animou",
+  "displayName": "animou",
   "expo": {
-    "name": "app",
-    "slug": "app",
+    "name": "animou",
+    "slug": "animou",
+    "scheme": "animou",
     "version": "1.0.0",
     "assetBundlePatterns": [
       "**/*"
-    ]
+    ],
+    "android": {
+      "package": "com.animou"
+    },
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#5636D3"
+    },
+    "ios": {
+      "bundleIdentifier": "com.animou",
+      "buildNumber": "1.0.0"
+    },
+    "description": "",
+    "githubUrl": "https://github.com/RodrigoRVSN/animou"
   }
 }

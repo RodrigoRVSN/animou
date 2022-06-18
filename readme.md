@@ -1,0 +1,1 @@
+[Figma](https://www.figma.com/file/b7wP1pos3MX0UfyjCXN9N8/animou?node-id=0%3A1)

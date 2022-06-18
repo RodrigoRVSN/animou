@@ -7,12 +7,15 @@
     "android": "expo run:android",
     "ios": "expo run:ios",
     "web": "expo start --web",
-    "lint": "eslint \"*.{ts,tsx}\" --fix"
+    "lint": "eslint \"*.{ts,tsx}\" --fix",
+    "test": "jest",
+    "test:cov": "jest --coverage --maxWorkers=50%"
   },
   "dependencies": {
     "expo": "~45.0.0",
     "expo-splash-screen": "~0.15.1",
     "expo-status-bar": "~1.3.0",
+    "jest": "^28.1.1",
     "react": "17.0.2",
     "react-dom": "17.0.2",
     "react-native": "0.68.2",
@@ -21,6 +24,9 @@
   },
   "devDependencies": {
     "@babel/core": "^7.12.9",
+    "@testing-library/jest-native": "^4.0.5",
+    "@testing-library/react-native": "^9.1.0",
+    "@types/jest": "^28.1.2",
     "@types/react": "~17.0.21",
     "@types/react-native": "~0.67.6",
     "@types/styled-components-react-native": "^5.1.3",
@@ -29,7 +35,10 @@
     "eslint": "^8.18.0",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-prettier": "^4.0.0",
+    "jest-expo": "^45.0.0",
+    "jest-styled-components": "^7.0.8",
     "prettier": "^2.7.1",
+    "ts-jest": "^28.0.5",
     "typescript": "~4.3.5"
   },
   "private": true
