@@ -1,21 +1,28 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { Text } from 'react-native';
 
-import styled from 'styled-components/native';
+import styled, { ThemeProvider } from 'styled-components/native';
+import { useFonts } from 'expo-font';
+import { Inter_400Regular } from '@expo-google-fonts/inter';
+import { SpaceGrotesk_700Bold } from '@expo-google-fonts/space-grotesk';
+import AppLoading from 'expo-app-loading';
+import theme from './assets/styles/theme';
 
 export default function App() {
+  const [fontsLoaded] = useFonts({ Inter_400Regular, SpaceGrotesk_700Bold });
+
+  if (!fontsLoaded) {
+    return <AppLoading />;
+  }
+
   return (
-    <Container>
-      <Text>Open up App.js to start working on your app!</Text>
+    <ThemeProvider theme={theme}>
+      <Title>Open up App.js to start working on your app!</Title>
       <StatusBar style="auto" />
-    </Container>
+    </ThemeProvider>
   );
 }
 
-const Container = styled.View`
-  flex: 1;
-  background-color: #fff;
-  align-items: center;
-  justify-content: center;
+const Title = styled.Text`
+  color: ${({ theme }) => theme.colors.orange_brand};
 `;

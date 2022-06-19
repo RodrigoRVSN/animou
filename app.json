@@ -15,7 +15,7 @@
     "splash": {
       "image": "./assets/splash.png",
       "resizeMode": "contain",
-      "backgroundColor": "#5636D3"
+      "backgroundColor": "#1E1F24"
     },
     "ios": {
       "bundleIdentifier": "com.animou",
