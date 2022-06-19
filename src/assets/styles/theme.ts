@@ -11,5 +11,10 @@ export default {
     black200: '#1E1F24',
     black300: '#2B2C33',
     black400: '#454652'
+  },
+
+  font: {
+    heading: 'Inter_400Regular',
+    text: 'SpaceGrotesk_700Bold'
   }
 };

@@ -8,10 +8,7 @@ export const AuthRoutes = () => {
     <Navigator
       initialRouteName="onboard"
       screenOptions={{
-        headerShown: false,
-        cardStyle: { opacity: 1 },
-        gestureEnabled: true,
-        gestureDirection: 'vertical'
+        headerShown: false
       }}
     >
       {authRoutes.map(({ name, component }) => (
