@@ -1,7 +1,8 @@
 import { createStackNavigator } from '@react-navigation/stack';
-import { authRoutes } from './routes.data';
+import { RootStackParamList } from './Auth.types';
+import { authRoutes } from './Auth.data';
 
-const { Navigator, Screen } = createStackNavigator();
+const { Navigator, Screen } = createStackNavigator<RootStackParamList>();
 
 export const AuthRoutes = () => {
   return (

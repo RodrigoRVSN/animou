@@ -25,8 +25,3 @@ export const Bullet = styled.View<IBullet>`
     index === id - 1 ? theme.colors.red_brand : theme.colors.gray100};
   margin: 0 8px;
 `;
-
-export const ButtonContainer = styled.View`
-  flex: 1;
-  padding: 0 20px;
-`;

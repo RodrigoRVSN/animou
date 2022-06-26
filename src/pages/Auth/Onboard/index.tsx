@@ -8,13 +8,13 @@ import {
 import { Step } from './components/Step';
 import * as S from './styles';
 import { steps } from './Onboard.data';
-import AntDesign from '@expo/vector-icons/AntDesign';
-import { Button } from '../../../componentes/Button';
+import { ButtonContainer } from './components/ButtonContainer';
 
 export const Onboard = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const flatListRef = useRef<FlatList>(null);
   const { width } = useWindowDimensions();
+  const isLastStep = currentIndex === steps.length - 1;
 
   const handleNextStep = () => {
     const index = currentIndex + 1;
@@ -50,9 +50,10 @@ export const Onboard = () => {
         onMomentumScrollEnd={updateCurrentStep}
       />
 
-      <S.ButtonContainer>
-        <Button label={<AntDesign name="right" />} onPress={handleNextStep} />
-      </S.ButtonContainer>
+      <ButtonContainer
+        isLastStep={isLastStep}
+        handleNextStep={handleNextStep}
+      />
     </S.Container>
   );
 };

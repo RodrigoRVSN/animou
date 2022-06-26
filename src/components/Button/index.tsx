@@ -1,0 +1,18 @@
+import type { ThemeColors } from '../../assets/styles/styled';
+import type { ReactNode } from 'react';
+import type { RectButtonProps } from 'react-native-gesture-handler';
+import * as S from './styles';
+
+export interface IButtonProps extends RectButtonProps {
+  label: string | ReactNode;
+  onPress: () => void;
+  color?: keyof ThemeColors;
+}
+
+export const Button = ({ label, onPress, color }: IButtonProps) => {
+  return (
+    <S.ButtonStyled onPress={onPress} color={color}>
+      <S.Label>{label}</S.Label>
+    </S.ButtonStyled>
+  );
+};
