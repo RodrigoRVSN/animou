@@ -9,9 +9,9 @@ export interface IButtonProps extends RectButtonProps {
   color?: keyof ThemeColors;
 }
 
-export const Button = ({ label, onPress, color }: IButtonProps) => {
+export const Button = ({ label, onPress, color, ...rest }: IButtonProps) => {
   return (
-    <S.ButtonStyled onPress={onPress} color={color}>
+    <S.ButtonStyled {...rest} onPress={onPress} color={color}>
       <S.Label>{label}</S.Label>
     </S.ButtonStyled>
   );

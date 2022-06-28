@@ -2,7 +2,8 @@ import styled from 'styled-components/native';
 
 export const Container = styled.View`
   align-items: center;
-  justify-content: center;
+  justify-content: flex-end;
+  margin-bottom: 40px;
 `;
 
 export const Title = styled.Text`
@@ -23,7 +24,6 @@ export const Description = styled.Text`
 `;
 
 export const Picture = styled.Image`
-  height: 300px;
+  height: 280px;
   margin-bottom: 48px;
-  width: 300px;
 `;

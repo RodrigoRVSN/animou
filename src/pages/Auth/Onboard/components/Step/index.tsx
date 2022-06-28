@@ -7,7 +7,7 @@ export const Step = ({ item, children }: IStepProps) => {
 
   return (
     <S.Container style={{ width }}>
-      <S.Picture source={item.image} />
+      <S.Picture source={item.image} resizeMode="contain" />
 
       {children}
 
