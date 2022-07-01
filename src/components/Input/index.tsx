@@ -6,12 +6,12 @@ import { TextInputProps } from 'react-native';
 import * as S from './styles';
 
 export interface IInput extends TextInputProps {
-  error?: string;
   label: string;
   isPassword?: boolean;
+  error?: string;
 }
 
-export const Input = ({ label, isPassword, ...rest }: IInput) => {
+export const Input = ({ label, isPassword, error, ...rest }: IInput) => {
   const [isFocused, setIsFocused] = useState(false);
   const [isSecureEntry, setIsSecureEntry] = useState(false);
 
@@ -41,6 +41,8 @@ export const Input = ({ label, isPassword, ...rest }: IInput) => {
           </BorderlessButton>
         )}
       </S.InputContainer>
+
+      <S.ErrorMessage>{error}</S.ErrorMessage>
     </>
   );
 };

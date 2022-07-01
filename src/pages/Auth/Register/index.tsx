@@ -1,7 +1,7 @@
 import { Text } from 'react-native';
-import { Input } from '../../../components/Input';
 import { AuthStack } from '../../../routes/Auth/Auth.types';
 import { FormContainer } from '../components/FormContainer';
+import { GenericForm } from '../components/GenericForm';
 
 import * as S from './styles';
 
@@ -23,18 +23,7 @@ export const Register = ({ navigation }: IRegister) => {
         </Text>
       }
     >
-      <Input
-        keyboardType="email-address"
-        label="E-mail"
-        placeholder="meuemail@gmai.com"
-      />
-      <Input label="Senha" placeholder="*********" isPassword />
-
-      <S.ButtonRegister
-        label="Cadastrar"
-        onPress={console.log}
-        color="orange_brand"
-      />
+      <GenericForm buttonLabel="Cadastrar" />
     </FormContainer>
   );
 };

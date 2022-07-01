@@ -19,7 +19,7 @@ export const InputContainer = styled.View<InputProps>`
   border-width: 2px;
   flex-direction: row;
   justify-content: space-between;
-  margin-bottom: 16px;
+  margin-bottom: 8px;
   padding: 14px 18px;
 `;
 
@@ -31,4 +31,10 @@ export const InputStyled = styled(TextInput)`
 export const PasswordIcon = styled(Icon)`
   color: ${({ theme }) => theme.colors.white};
   font-size: 24px;
+`;
+
+export const ErrorMessage = styled.Text`
+  color: ${({ theme }) => theme.colors.red};
+  font-size: 14px;
+  margin-bottom: 8px;
 `;
