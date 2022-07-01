@@ -56,7 +56,7 @@ export const GenericForm = ({ buttonLabel }: IGenericForm) => {
         name="password"
       />
 
-      <S.ButtonRegister
+      <S.ButtonSubmit
         label={buttonLabel}
         onPress={handleSubmit(onSubmit)}
         color="orange_brand"

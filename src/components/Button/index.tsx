@@ -14,7 +14,7 @@ export const Button = ({ label, onPress, color, ...rest }: IButtonProps) => {
     <S.ButtonStyled
       {...rest}
       onPress={onPress}
-      color={!rest.enabled ? 'gray100' : color}
+      color={rest.enabled !== undefined && !rest.enabled ? 'gray100' : color}
     >
       <S.Label>{label}</S.Label>
     </S.ButtonStyled>

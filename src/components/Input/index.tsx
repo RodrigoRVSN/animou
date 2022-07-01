@@ -13,7 +13,7 @@ export interface IInput extends TextInputProps {
 
 export const Input = ({ label, isPassword, error, ...rest }: IInput) => {
   const [isFocused, setIsFocused] = useState(false);
-  const [isSecureEntry, setIsSecureEntry] = useState(false);
+  const [isSecureEntry, setIsSecureEntry] = useState(true);
 
   const toggleFocus = useCallback(() => {
     setIsFocused((prevState) => !prevState);
