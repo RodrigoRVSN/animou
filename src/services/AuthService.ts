@@ -1,3 +1,4 @@
+import { IForm } from '../pages/Auth/Auth.types';
 import { IRegisterUser } from './AuthService.types';
 
 class AuthService {
@@ -10,7 +11,7 @@ class AuthService {
   async registerUser(body: IRegisterUser) {
     return await fetch(`${this.baseURL}/user/create-user`, {
       method: 'POST',
-      body: JSON.stringify({ ...body }),
+      body: JSON.stringify(body),
       headers: {
         'Content-type': 'application/json; charset=UTF-8'
       }
@@ -21,6 +22,17 @@ class AuthService {
     return await fetch(`${this.baseURL}/user/validate-email`, {
       method: 'POST',
       body: JSON.stringify({ email }),
+      headers: {
+        'Content-type': 'application/json; charset=UTF-8'
+      }
+    });
+  }
+
+  async makeLogin(body: IForm) {
+    console.log(body);
+    return await fetch(`${this.baseURL}/user/login`, {
+      method: 'POST',
+      body: JSON.stringify(body),
       headers: {
         'Content-type': 'application/json; charset=UTF-8'
       }
