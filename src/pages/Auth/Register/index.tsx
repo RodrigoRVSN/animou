@@ -1,17 +1,28 @@
 import { Text } from 'react-native';
-import { AuthStack } from '../../../routes/Auth/Auth.types';
+import type { IAuthScreen } from '../../../routes/Auth/Auth.types';
+import type { IForm } from '../Auth.types';
+import AuthService from '../../../services/AuthService';
 import { FormContainer } from '../components/FormContainer';
 import { GenericForm } from '../components/GenericForm';
 
 import * as S from './styles';
 
-interface IRegister {
-  navigation: AuthStack;
-}
-
-export const Register = ({ navigation }: IRegister) => {
+export const Register = ({ navigation }: IAuthScreen) => {
   const goToLogin = () => {
     navigation.navigate('login');
+  };
+
+  const handleSubmit = async ({ email, password }: IForm) => {
+    try {
+      await AuthService.validateEmail(email);
+
+      navigation.navigate('userInfo', {
+        email,
+        password
+      });
+    } catch {
+      goToLogin();
+    }
   };
 
   return (
@@ -23,7 +34,7 @@ export const Register = ({ navigation }: IRegister) => {
         </Text>
       }
     >
-      <GenericForm buttonLabel="Cadastrar" />
+      <GenericForm buttonLabel="Cadastrar" onSubmit={handleSubmit} />
     </FormContainer>
   );
 };

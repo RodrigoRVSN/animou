@@ -4,23 +4,23 @@ import * as S from './styles';
 
 import { yupResolver } from '@hookform/resolvers/yup';
 import { validationSchema } from './validationSchema';
+import { IForm } from '../../Auth.types';
 
 interface IGenericForm {
   buttonLabel: 'Cadastrar' | 'Entrar';
+  onSubmit: (data: IForm) => Promise<void>;
 }
 
-export const GenericForm = ({ buttonLabel }: IGenericForm) => {
+export const GenericForm = ({ buttonLabel, onSubmit }: IGenericForm) => {
   const {
     control,
     register,
     handleSubmit,
     formState: { errors, isValid }
-  } = useForm({
+  } = useForm<IForm>({
     resolver: yupResolver(validationSchema),
     mode: 'all'
   });
-
-  const onSubmit = (data) => console.log(JSON.stringify(data));
 
   return (
     <>

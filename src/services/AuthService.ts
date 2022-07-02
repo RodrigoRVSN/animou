@@ -2,20 +2,20 @@ class AuthService {
   baseURL: string;
 
   constructor() {
-    this.baseURL = 'https://animou-api-production.up.railway.app/';
+    this.baseURL = 'https://animou-api-production.up.railway.app';
   }
 
-  registerUser(body: BodyInit) {
-    return fetch(`${this.baseURL}/user/validate-email`, {
+  async registerUser(body: BodyInit) {
+    return fetch(`${this.baseURL}/user/create-user`, {
       method: 'POST',
       body
     });
   }
 
-  validateEmail(body: BodyInit) {
-    return fetch(`${this.baseURL}/user/create-user`, {
+  async validateEmail(email: string) {
+    return await fetch(`${this.baseURL}/user/validate-email`, {
       method: 'POST',
-      body
+      body: JSON.stringify({ email })
     });
   }
 }
