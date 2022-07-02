@@ -16,8 +16,7 @@ export const Login = ({ navigation }: IAuthScreen) => {
     try {
       const response = await AuthService.makeLogin(body);
       const token = await response.json();
-      console.log(token);
-      navigation.navigate('onboard');
+      navigation.navigate('home');
     } catch {
       goToRegister();
     }
