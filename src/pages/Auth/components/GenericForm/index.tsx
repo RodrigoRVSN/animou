@@ -1,10 +1,10 @@
 import { Controller, useForm } from 'react-hook-form';
-import { Input } from '../../../../components/Input';
 import * as S from './styles';
 
 import { yupResolver } from '@hookform/resolvers/yup';
 import { validationSchema } from './validationSchema';
 import { IForm } from '../../Auth.types';
+import { Input } from '@components/Input';
 
 interface IGenericForm {
   buttonLabel: 'Cadastrar' | 'Entrar';

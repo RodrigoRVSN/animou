@@ -1,4 +1,4 @@
-import { IForm } from '../pages/Auth/Auth.types';
+import { IForm } from '@pages/Auth/Auth.types';
 import { IRegisterUser } from './AuthService.types';
 
 class AuthService {
@@ -29,7 +29,6 @@ class AuthService {
   }
 
   async makeLogin(body: IForm) {
-    console.log(body);
     return await fetch(`${this.baseURL}/user/login`, {
       method: 'POST',
       body: JSON.stringify(body),

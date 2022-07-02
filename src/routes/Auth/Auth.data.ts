@@ -1,4 +1,4 @@
-import { Login, Register, Onboard, UserInfo } from '../../pages/Auth';
+import { Login, Register, Onboard, UserInfo } from '@pages/Auth';
 import { IAuthRoutes } from './Auth.types';
 
 export const authRoutes: Array<IAuthRoutes> = [

@@ -1,7 +1,7 @@
+import { IAuthScreen } from '@routes/Auth/Auth.types';
+import AuthService from '@services/AuthService';
 import { Text } from 'react-native';
 import type { IForm } from '../Auth.types';
-import type { IAuthScreen } from '../../../routes/Auth/Auth.types';
-import AuthService from '../../../services/AuthService';
 import { FormContainer } from '../components/FormContainer';
 import { GenericForm } from '../components/GenericForm';
 

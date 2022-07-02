@@ -1,5 +1,5 @@
 import type { StackNavigationProp } from '@react-navigation/stack';
-import type { IForm } from '../../pages/Auth/Auth.types';
+import type { IForm } from '@pages/Auth/Auth.types';
 import type { RouteProp } from '@react-navigation/native';
 
 export type RootStackParamList = {
@@ -16,7 +16,7 @@ export interface IAuthScreen {
 
 export interface IAuthRoutes {
   name: keyof RootStackParamList;
-  component: ({ navigation }: IAuthScreen) => unknown;
+  component: ({ navigation, route }: IAuthScreen) => unknown;
 }
 
 export type AuthStack = StackNavigationProp<RootStackParamList>;

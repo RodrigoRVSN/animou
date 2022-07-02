@@ -1,4 +1,4 @@
-import type { ThemeColors } from '../../assets/styles/styled';
+import { ThemeColors } from '@assets/styles/styled';
 import type { ReactNode } from 'react';
 import type { RectButtonProps } from 'react-native-gesture-handler';
 import * as S from './styles';
