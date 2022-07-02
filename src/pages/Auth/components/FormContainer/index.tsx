@@ -4,7 +4,7 @@ import * as S from './styles';
 interface IFormContainer {
   children: ReactNode;
   description: string;
-  redirectText: ReactNode;
+  redirectText?: ReactNode;
 }
 
 export const FormContainer = ({

@@ -1,6 +1,6 @@
 import { IAuthScreen } from '@routes/Auth/Auth.types';
 import AuthService from '@services/AuthService';
-import { Text, View } from 'react-native';
+import { FormContainer } from '../components/FormContainer';
 import { InfoForm } from './components/InfoForm';
 import { IUserInfo } from './UserInfo.types';
 
@@ -17,9 +17,10 @@ export const UserInfo = ({ route, navigation }: IAuthScreen) => {
   };
 
   return (
-    <View>
+    <FormContainer
+      description={`Insira as informações para\ncompletar seu perfil`}
+    >
       <InfoForm onSubmit={handleSubmit} />
-      <Text>oi</Text>
-    </View>
+    </FormContainer>
   );
 };

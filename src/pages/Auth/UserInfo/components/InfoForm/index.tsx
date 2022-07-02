@@ -1,9 +1,9 @@
 import { Button } from '@components/Button';
 import { Input } from '@components/Input';
 import { yupResolver } from '@hookform/resolvers/yup';
-import { validationSchema } from '@pages/Auth/components/GenericForm/validationSchema';
 import { Controller, useForm } from 'react-hook-form';
 import { IUserInfo } from '../../UserInfo.types';
+import { validationSchema } from './info.schema';
 
 interface IInfoForm {
   onSubmit: (body: IUserInfo) => void;
@@ -53,7 +53,7 @@ export const InfoForm = ({ onSubmit }: IInfoForm) => {
       />
 
       <Button
-        label="Criar conta"
+        label="Confirmar"
         onPress={handleSubmit(onSubmit)}
         color="orange_brand"
         enabled={isValid}
