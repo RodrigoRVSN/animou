@@ -16,6 +16,7 @@
     "@expo-google-fonts/space-grotesk": "^0.2.2",
     "@expo/vector-icons": "^13.0.0",
     "@hookform/resolvers": "^2.9.3",
+    "@react-native-async-storage/async-storage": "^1.17.7",
     "@react-navigation/native": "^6.0.10",
     "@react-navigation/stack": "^6.2.1",
     "@reduxjs/toolkit": "^1.8.3",
@@ -33,6 +34,8 @@
     "react-native-screens": "^3.13.1",
     "react-native-web": "0.17.7",
     "react-redux": "^8.0.2",
+    "redux-persist": "^6.0.0",
+    "redux-thunk": "^2.4.1",
     "styled-components": "^5.3.5",
     "yup": "^0.32.11"
   },

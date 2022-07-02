@@ -1,5 +1,0 @@
-- [x] Style the user informations screen
-- [] Redirect in login screen
-- [] Persist data with Redux
-- [] Make tests with Redux
-- [] Refactor functions

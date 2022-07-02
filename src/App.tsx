@@ -9,7 +9,8 @@ import { Provider } from 'react-redux';
 import theme from './assets/styles/theme';
 import { Routes } from './routes';
 import * as SplashScreen from 'expo-splash-screen';
-import { store } from '@store/index';
+import { persistor, store } from '@store/index';
+import { PersistGate } from 'redux-persist/integration/react';
 
 export default function App() {
   const [appIsReady, setAppIsReady] = useState(false);
@@ -46,7 +47,9 @@ export default function App() {
       <StatusBar style="auto" />
 
       <Provider store={store}>
-        <Routes />
+        <PersistGate loading={null} persistor={persistor}>
+          <Routes />
+        </PersistGate>
       </Provider>
     </ThemeProvider>
   );
