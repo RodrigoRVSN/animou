@@ -1,13 +1,15 @@
 import { StatusBar } from 'expo-status-bar';
 import React, { useEffect, useState } from 'react';
-
 import { ThemeProvider } from 'styled-components/native';
-import theme from './assets/styles/theme';
-import { Routes } from './routes';
-import * as SplashScreen from 'expo-splash-screen';
 import { useFonts } from '@expo-google-fonts/inter';
 import { Inter_400Regular } from '@expo-google-fonts/inter';
 import { SpaceGrotesk_700Bold } from '@expo-google-fonts/space-grotesk';
+import { Provider } from 'react-redux';
+
+import theme from './assets/styles/theme';
+import { Routes } from './routes';
+import * as SplashScreen from 'expo-splash-screen';
+import { store } from '@store/index';
 
 export default function App() {
   const [appIsReady, setAppIsReady] = useState(false);
@@ -42,7 +44,10 @@ export default function App() {
   return (
     <ThemeProvider theme={theme}>
       <StatusBar style="auto" />
-      <Routes />
+
+      <Provider store={store}>
+        <Routes />
+      </Provider>
     </ThemeProvider>
   );
 }

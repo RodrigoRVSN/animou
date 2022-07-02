@@ -32,6 +32,7 @@
     "react-native-safe-area-context": "^4.3.1",
     "react-native-screens": "^3.13.1",
     "react-native-web": "0.17.7",
+    "react-redux": "^8.0.2",
     "styled-components": "^5.3.5",
     "yup": "^0.32.11"
   },

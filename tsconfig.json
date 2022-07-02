@@ -19,6 +19,9 @@
       "@assets/*": [
         "./src/assets/*"
       ],
+      "@store/*": [
+        "./src/store/*"
+      ],
     }
   }
 }

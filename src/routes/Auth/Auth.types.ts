@@ -7,7 +7,6 @@ export type RootStackParamList = {
   onboard: undefined;
   register: undefined;
   userInfo: IForm | undefined;
-  home: undefined;
 };
 
 export interface IAuthScreen {

@@ -4,10 +4,14 @@ import { Text } from 'react-native';
 import type { IForm } from '../Auth.types';
 import { FormContainer } from '../components/FormContainer';
 import { GenericForm } from '../components/GenericForm';
+import { useDispatch } from 'react-redux';
 
 import * as S from './styles';
+import { setToken } from '@store/features/authSlice';
 
 export const Login = ({ navigation }: IAuthScreen) => {
+  const dispatch = useDispatch();
+
   const goToRegister = () => {
     navigation.navigate('register');
   };
@@ -15,9 +19,10 @@ export const Login = ({ navigation }: IAuthScreen) => {
   const handleSubmit = async (body: IForm) => {
     try {
       const response = await AuthService.makeLogin(body);
-      const token = await response.json();
-      navigation.navigate('home');
-    } catch {
+      const { access_token } = await response.json();
+      dispatch(setToken(access_token));
+    } catch (error) {
+      console.log({ error });
       goToRegister();
     }
   };
