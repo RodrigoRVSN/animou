@@ -22,7 +22,6 @@ export const Login = ({ navigation }: IAuthScreen) => {
       const { access_token } = await response.json();
       dispatch(setToken(access_token));
     } catch (error) {
-      console.log({ error });
       goToRegister();
     }
   };
