@@ -1,5 +1,5 @@
 import { NavigationContainer } from '@react-navigation/native';
-import { RootState } from '@store/index';
+import { RootState } from '@store/configStore';
 import { AppRoutes } from './App';
 import { AuthRoutes } from './Auth';
 import { useSelector } from 'react-redux';

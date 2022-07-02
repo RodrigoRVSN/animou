@@ -9,7 +9,7 @@ import { Provider } from 'react-redux';
 import theme from './assets/styles/theme';
 import { Routes } from './routes';
 import * as SplashScreen from 'expo-splash-screen';
-import { persistor, store } from '@store/index';
+import { persistor, store } from '@store/configStore';
 import { PersistGate } from 'redux-persist/integration/react';
 
 export default function App() {

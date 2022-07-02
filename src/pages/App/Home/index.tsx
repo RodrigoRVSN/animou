@@ -1,6 +1,6 @@
 import { Text, View } from 'react-native';
 import { useDispatch, useSelector } from 'react-redux';
-import { RootState } from '@store/index';
+import { RootState } from '@store/configStore';
 import { Button } from '@components/Button';
 import { clearToken } from '@store/features/authSlice';
 
