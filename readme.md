@@ -1,58 +1,50 @@
-[Figma](https://www.figma.com/file/b7wP1pos3MX0UfyjCXN9N8/animou?node-id=0%3A1)
-
-- 
-
-# renovaih
+# animou
 
 <!--- https://shields.io --->
 
-![GitHub repo size](https://img.shields.io/github/repo-size/rodrigorvsn/renovaih?style=for-the-badge)
-![GitHub language count](https://img.shields.io/github/languages/count/rodrigorvsn/renovaih?style=for-the-badge)
-![GitHub forks](https://img.shields.io/github/forks/rodrigorvsn/renovaih?style=for-the-badge)
-![Bitbucket open issues](https://img.shields.io/bitbucket/issues/rodrigorvsn/renovaih?style=for-the-badge)
-![Bitbucket open pull requests](https://img.shields.io/bitbucket/pr-raw/rodrigorvsn/renovaih?style=for-the-badge)
+![GitHub repo size](https://img.shields.io/github/repo-size/rodrigorvsn/animou?style=for-the-badge)
+![GitHub language count](https://img.shields.io/github/languages/count/rodrigorvsn/animou?style=for-the-badge)
+![GitHub forks](https://img.shields.io/github/forks/rodrigorvsn/animou?style=for-the-badge)
+![Bitbucket open issues](https://img.shields.io/bitbucket/issues/rodrigorvsn/animou?style=for-the-badge)
+![Bitbucket open pull requests](https://img.shields.io/bitbucket/pr-raw/rodrigorvsn/animou?style=for-the-badge)
 
 ___
 <!--- #################### mudar badges #################### --->
 
+
 https://user-images.githubusercontent.com/75763403/177013218-a38b21e2-d332-4dff-ada7-14ab04e900b4.mp4
+
 
 <!--- #################### mudar imagem exemplo #################### --->
 ___
-> This is a educational website to see posts and do projects.
+> This is a social media app for otakus.
 ___
 ## 💻 Prerequisites
 
 - Install LTS Node version.
-- Create OAuth provider in Google Console
-- Create a database in postgres (can be done with Prisma + Heroku)
+- Install Expo
 
 <!--- #################### mudar pré-requisitos  ####################--->
 ___
 ## 🛠 Tools used
 
 - Typescript
-- <b>Nextjs</b>
-- Prisma ORM
-- Prismic CMS
-- Next-auth
-- Axios
-- React query
-- Postgres
-- Next-themes
-- React-testing-library
-- Tailwind CSS
+- React Native (Expo)
+- Redux (Redux toolkit, Redux persist, Redux thunk and React Redux)
+- React hook form
+- Yup
+- [Figma](https://www.figma.com/file/b7wP1pos3MX0UfyjCXN9N8/animou?node-id=0%3A1)
 
 <!--- #################### mudar ferramentas #################### --->
 
 ___
 
-## 🚀 Installing renovaih
+## 🚀 Installing animou
 
 #### Clone repository
 
 ```powershell
-  git clone https://github.com/RodrigoRVSN/renovaih.git
+  git clone https://github.com/RodrigoRVSN/animou.git
 ```
 
 #### Install dependencies
@@ -61,56 +53,17 @@ ___
   yarn
 ```
 
-#### Seed the database with the ranking
+#### Run the app
 
 ```powershell
-  yarn prisma db seed
-```
-
-#### Run app
-
-```powershell
-  yarn dev
-```
-
-#### Run unit/integration tests
-
-```powershell
-  yarn test
-```
-
-#### Run cypress tests in CLI
-
-```powershell
-  yarn cy:run
-```
-
-#### Run cypress tests in browser
-
-```powershell
-  yarn cy:open
-```
-
-#### Open prisma studio to access and alter database
-
-```powershell
-yarn prisma studio
-```
-
-#### Endpoints of the application
-
-```powershell
-GET (ranking DESC) -> /api/users
-PUT (edit user info) -> /api/users/edit/${id}
-GET (user info) -> /api/users/${id}
-GET (lit projects) -> /api/projects
+  yarn start
 ```
 
 ___
 
-## 📫 Contribuiting with renovaih
+## 📫 Contribuiting with animou
 
-To contribue with renovaih, follow the steps:
+To contribue with animou, follow the steps:
 
 1. Fork this repository.
 2. Create a branch: `git checkout -b <name_branch>`.
